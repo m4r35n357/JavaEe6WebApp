@@ -2,7 +2,7 @@
 
 host="${1:-localhost}"
 port="${2:-9090}"
-contentRoot="${3:-/home/*/QNAP/Public/Freecom400GB/jukebox/playlist}"
+contentRoot="${3:-/home/*/SHARED/nas/Public/Freecom400GB/jukebox/playlist}"
 resources="http://$host:$port/jee6webapp/resources"
 
 content='Content-Type: application/json'

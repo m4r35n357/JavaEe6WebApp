@@ -16,7 +16,7 @@
 		<organization>The Pond</organization>
 		<fullName>Ian Smith</fullName>
 		<email>m4r35n357@gmail.com</email>
-		<repoManager>http://server:6060/nexus/content/repositories</repoManager>
+		<repoManager>http://sumo:8080/nexus/content/repositories</repoManager>
 		<javaVersion>1.6</javaVersion>
 		<glassfishVersion>3.1</glassfishVersion>
 		<surefireVersion>2.7.1</surefireVersion>
@@ -53,13 +53,13 @@
 		
 		<site>
 			<id>site</id>
-			<url>file:///net/qnap/Public/JavaEe6WebApp/</url>
+			<url>file:///net/nas/Public/JavaEe6WebApp/</url>
 		</site>
 	</distributionManagement>
 
 	<ciManagement>
-		<system>Hudson</system>
-		<url>http://server:7070/job/JEE%206%20Web%20App/</url>
+		<system>Jenkins</system>
+		<url>http://sumo:8080/jenkins/job/JavaEe6WebApp/</url>
 	</ciManagement>
 
 	<scm>
