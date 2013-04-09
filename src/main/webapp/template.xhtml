@@ -46,15 +46,15 @@
 		
         <f:loadBundle basename="uk.me.doitto.webapp.entity.General" var="msg" />
         
-        <h:messages styleClass="errorMessage" showDetail="true" tooltip="true" />
+        <h:messages styleClass="errorMessage" globalOnly="true" showDetail="true" tooltip="true" />
         
         <div class="container showgrid">
             <div id="header" class="span-24 last">
                 <ui:insert name="header">
                     <h:form>
-                        <h:commandLink action="#{templateController.index}">
+                        <h:commandLink id="home" action="#{templateController.index}">
                             <h:graphicImage library="images" name="harrison.jpg" />
-                        </h:commandLink>
+                        </h:commandLink><h:message for="home" />
                         <h:outputText value=" #{templateController.loggedInUser} " rendered="#{templateController.loggedInUser ne null}" />
                         <h:commandLink action="#{templateController.logout}" rendered="#{templateController.loggedInUser ne null}">#{msg.logOutLabel}</h:commandLink>
                         <h:commandLink action="/login" rendered="#{templateController.loggedInUser eq null}">#{msg.logInLabel}</h:commandLink>
@@ -73,16 +73,16 @@
                                 <li><h:commandLink action="#{trackController.jsfList}" value="Tracks" /></li>
                             </ul>
                             <ul class="menu">
-<!--                                <li><h:outputLink value="/jee6webapp/dwr">DWR Test</h:outputLink></li>-->
-<!--                                <li><h:outputLink value="/jee6webapp/dwr/engine.js">DWR Engine</h:outputLink></li>-->
-<!--                                <li><h:outputLink value="/jee6webapp/dwr/util.js">DWR Utils</h:outputLink></li>-->
+                               <li><h:outputLink value="/jee6webapp/dwr">DWR Test</h:outputLink></li>
+<!--                                <li><h:outputLink value="/jee6webapp/dwr/engine.js">DWR Engine</h:outputLink></li> -->
+<!--                                <li><h:outputLink value="/jee6webapp/dwr/util.js">DWR Utils</h:outputLink></li> -->
                                 <li><h:outputLink value="/jee6webapp/resources/application.wadl">WADL</h:outputLink></li>
                             </ul>
                             <ul class="menu">
-                                <li><h:outputLink value="http://qnap:81/JavaEe6WebApp">Maven Site</h:outputLink></li>
-                                <li><h:outputLink value="http://localhost:7070">Jenkins</h:outputLink></li>
-                                <li><h:outputLink value="http://localhost:6060/nexus">Nexus</h:outputLink></li>
-                                <li><h:outputLink value="http://localhost:6060/dwr3">DWR Demo</h:outputLink></li>
+                                <li><h:outputLink value="http://nas:81/JavaEe6WebApp">Maven Site</h:outputLink></li>
+                                <li><h:outputLink value="http://localhost:8080/jenkins">Jenkins</h:outputLink></li>
+                                <li><h:outputLink value="http://localhost:8080/nexus">Nexus</h:outputLink></li>
+                                <li><h:outputLink value="http://localhost:8080/dwr">DWR Demos</h:outputLink></li>
                             </ul>
                             <ul class="menu">
                                 <li><h:commandLink action="#{templateController.dwr}" value="DWR Test" /></li>

@@ -2,7 +2,7 @@
 <dwr>
 	<!-- init is only needed if you are extending DWR -->
 	<init>
-		<creator id="singleton" class="org.directwebremoting.create.SingletonCreator"/>		
+<!-- 		<creator id="singleton" class="org.directwebremoting.create.SingletonCreator"/>		 -->
 	</init>
 
 	<allow>
@@ -17,16 +17,16 @@
 		</create>
 		
 		<!-- Service beans -->
-		<create creator="singleton" javascript="JsAppUserService">
+		<create creator="static" javascript="JsAppUserService">
 			<param name="class" value="uk.me.doitto.webapp.beans.AppUserService" />
 		</create>		
-		<create creator="singleton" javascript="JsArtistService">
+		<create creator="static" javascript="JsArtistService">
 			<param name="class" value="uk.me.doitto.webapp.beans.ArtistService" />
 		</create>		
-		<create creator="singleton" javascript="JsAlbumService">
+		<create creator="static" javascript="JsAlbumService">
 			<param name="class" value="uk.me.doitto.webapp.beans.AlbumService" />
 		</create>		
-		<create creator="singleton" javascript="JsTrackService">
+		<create creator="static" javascript="JsTrackService">
 			<param name="class" value="uk.me.doitto.webapp.beans.TrackService" />
 		</create>
 		
