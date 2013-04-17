@@ -34,15 +34,16 @@
         <h:outputStylesheet library="css" name="ics.css" />
         <!--<h:outputStylesheet library="css/blueprint" name="print.css" />-->
         
-<!--        <script type='text/javascript' src='/jee6webapp/dwr/engine.js'></script>-->
-<!--        <script type='text/javascript' src='/jee6webapp/dwr/util.js'></script>-->
-<!--        <script type='text/javascript' src='/jee6webapp/dwr/interface/Clock.js'></script>-->
+       <script type='text/javascript' src='/jee6webapp/dwr/engine.js'></script>
+       <script type='text/javascript' src='/jee6webapp/dwr/util.js'></script>
+       <script type='text/javascript' src='/jee6webapp/dwr/interface/Clock.js'></script>
+<!--        <h:outputScript library="js" name="clockdwr.js" /> -->
         
         <title>Facelets Template</title>
     </h:head>
 
     <h:body>
-<!--		<body onload="dwr.engine.setActiveReverseAjax(true);" />-->
+<!-- 	<h:body onload="dwr.engine.setActiveReverseAjax(true);"> -->
 		
         <f:loadBundle basename="uk.me.doitto.webapp.entity.General" var="msg" />
         
@@ -54,7 +55,7 @@
                     <h:form>
                         <h:commandLink id="home" action="#{templateController.index}">
                             <h:graphicImage library="images" name="harrison.jpg" />
-                        </h:commandLink><h:message for="home" />
+                        </h:commandLink><!-- <h:message for="home" />-->
                         <h:outputText value=" #{templateController.loggedInUser} " rendered="#{templateController.loggedInUser ne null}" />
                         <h:commandLink action="#{templateController.logout}" rendered="#{templateController.loggedInUser ne null}">#{msg.logOutLabel}</h:commandLink>
                         <h:commandLink action="/login" rendered="#{templateController.loggedInUser eq null}">#{msg.logInLabel}</h:commandLink>
@@ -74,20 +75,16 @@
                             </ul>
                             <ul class="menu">
                                <li><h:outputLink value="/jee6webapp/dwr">DWR Test</h:outputLink></li>
-<!--                                <li><h:outputLink value="/jee6webapp/dwr/engine.js">DWR Engine</h:outputLink></li> -->
-<!--                                <li><h:outputLink value="/jee6webapp/dwr/util.js">DWR Utils</h:outputLink></li> -->
-                                <li><h:outputLink value="/jee6webapp/resources/application.wadl">WADL</h:outputLink></li>
+                               <li><h:outputLink value="/jee6webapp/dwr/engine.js">DWR Engine</h:outputLink></li>
+                               <li><h:outputLink value="/jee6webapp/dwr/util.js">DWR Utils</h:outputLink></li>
+                               <li><h:outputLink value="/jee6webapp/resources/application.wadl">WADL</h:outputLink></li>
                             </ul>
-                            <ul class="menu">
-                                <li><h:outputLink value="http://nas:81/JavaEe6WebApp">Maven Site</h:outputLink></li>
-                                <li><h:outputLink value="http://localhost:8080/jenkins">Jenkins</h:outputLink></li>
-                                <li><h:outputLink value="http://localhost:8080/nexus">Nexus</h:outputLink></li>
-                                <li><h:outputLink value="http://localhost:8080/dwr">DWR Demos</h:outputLink></li>
-                            </ul>
-                            <ul class="menu">
-                                <li><h:commandLink action="#{templateController.dwr}" value="DWR Test" /></li>
-                                <li><h:commandLink action="#{templateController.wadl}" value="WADL" /></li>
-                            </ul>
+<!--                             <ul class="menu"> -->
+<!--                                 <li><h:outputLink value="http://nas:81/JavaEe6WebApp">Maven Site</h:outputLink></li> -->
+<!--                                 <li><h:outputLink value="http://sumo:8080/jenkins">Jenkins</h:outputLink></li> -->
+<!--                                 <li><h:outputLink value="http://sumo:8080/nexus">Nexus</h:outputLink></li> -->
+<!--                                 <li><h:outputLink value="http://sumo:8080/dwr">DWR Demos</h:outputLink></li> -->
+<!--                             </ul> -->
                         </h:form>
                     </ui:insert>
                 </div>
@@ -97,17 +94,26 @@
                 </div>
             </div>
 
-            <div id="footer" class="span-24 last">
-                <ui:insert name="footer">
-                    <h:outputText value="#{templateController.world}" />
-                </ui:insert>
-				<div id="demoDiv"><input type="button" value="Start / Stop" onclick="Clock.toggle();" />
-					<p />
-					<h2 id="clockDisplay"></h2>
-				</div>
-			</div>
-            
-            <div id="debug" class="span-24 last">
+		<div id="footer" class="span-24 last">
+			<ui:insert name="footer">
+				<h:outputText value="#{templateController.world}" />
+			</ui:insert>
+<!-- 			<div id="demoDiv"> -->
+<!-- 				<input type="button" value="Start / Stop" onclick="Clock.toggle();" /> -->
+<!-- 				Server status: <span id="pollStatus"></span> -->
+<!-- 				<div id="error"></div> -->
+<!-- 				<p></p> -->
+<!-- 				<h2 id="clockDisplay"></h2> -->
+<!-- 			</div> -->
+<!-- 			<div> -->
+<!-- 				<h3>Filtering</h3> -->
+<!-- 				<input type="button" value="Enable Updates" onclick="enableUpdates(true);" /> -->
+<!-- 				<input type="button" value="Disable Updates" onclick="enableUpdates(false);" /> -->
+<!-- 			</div> -->
+		</div>
+
+
+		<div id="debug" class="span-24 last">
                 <h:panelGrid columns="1">
                     <h:panelGroup>
                         <h:form>

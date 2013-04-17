@@ -20,3 +20,7 @@ then browse to:
 
 http://localhost:9090/jee6webapp
 
+------------------------------------------------
+NB at the current time you will need to obtain the unreleased DWR JAR from http://java.net/projects/dwr/downloads/download/DWR_3.x/3.0_RC2/dwr.jar and set it up in your local repository as it appears in the POM.
+
+
