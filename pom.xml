@@ -18,7 +18,7 @@
 		<email>m4r35n357@gmail.com</email>
 		<repoManager>http://sumo:8080/nexus/content/repositories</repoManager>
 		<javaVersion>1.6</javaVersion>
-		<glassfishVersion>3.1</glassfishVersion>
+		<glassfishVersion>3.1.2.2</glassfishVersion>
 		<surefireVersion>2.7.1</surefireVersion>
 	</properties>
 
@@ -179,7 +179,7 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>org.glassfish.extras</groupId>
+			<groupId>org.glassfish.main.extras</groupId>
 			<artifactId>glassfish-embedded-all</artifactId>
 			<version>${glassfishVersion}</version>
 			<scope>provided</scope>
@@ -427,7 +427,7 @@
 
 			<!-- Configure the Embedded GlassFish Maven plugin -->
 			<plugin>
-				<groupId>org.glassfish</groupId>
+				<groupId>org.glassfish.embedded</groupId>
 				<artifactId>maven-embedded-glassfish-plugin</artifactId>
 				<version>${glassfishVersion}</version>
 				<configuration>
