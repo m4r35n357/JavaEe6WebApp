@@ -184,6 +184,12 @@
 			<version>${glassfishVersion}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>uk.me.doitto</groupId>
+			<artifactId>orbits</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<profiles>
