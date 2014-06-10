@@ -283,6 +283,7 @@
 				<version>${surefireVersion}</version>
 				<configuration>
 					<!-- <forkMode>perTest</forkMode> -->
+<!-- 					<enableAssertions>true</enableAssertions> -->
 					<excludes>
 						<exclude>**/*IntegrationTest*.java</exclude>
 					</excludes>
@@ -315,6 +316,7 @@
 					<source>${javaVersion}</source>
 					<target>${javaVersion}</target>
 					<debug>true</debug>
+					<compilerArgument>-Xlint:unchecked</compilerArgument>
 				</configuration>
 			</plugin>
 
