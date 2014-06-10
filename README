@@ -1,24 +1,28 @@
-This is a Maven project
+This is a Maven project using Java 6 and Java EE 6
 
 
-To download source:
+To obtain the source code:
 
 git clone git://github.com/m4r35n357/JavaEe6WebApp.git
 
 
-To build & test:
+To generate the JPA metamodel:
+
+$ mvn -Pjpa-canonical-gen clean compile
+
+
+To build & test the project:
 
 $ cd JavaEe6WebApp
 $ mvn clean install
 
 
-To run:
+To run the application:
 
 $ mvn embedded-glassfish:run
 
-then browse to:
+then browse to: http://localhost:9090/jee6webapp
 
-http://localhost:9090/jee6webapp
 
 ------------------------------------------------
 NB at the current time you will need to obtain the unreleased DWR JAR from http://java.net/projects/dwr/downloads/download/DWR_3.x/3.0_RC2/dwr.jar and set it up in your local repository as it appears in the POM.
