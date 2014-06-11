@@ -133,6 +133,16 @@ public abstract class Crud <T extends AbstractEntity> implements ICrud<T, Long> 
         }
         return query.setFirstResult(first).setMaxResults(max).getResultList();
     }
+    
+    @Override
+	public int count () {
+		assert em != null;
+    	LOGGER.log(Level.FINE, "count() " + type);
+    	CriteriaBuilder builder = em.getCriteriaBuilder();
+        CriteriaQuery<Long> cq = builder.createQuery(Long.class);
+        cq.select(builder.count(cq.from(type)));
+        return em.createQuery(cq).getSingleResult().intValue();
+    }
 
     @Override
     public List<T> findAll () {
@@ -228,14 +238,5 @@ public abstract class Crud <T extends AbstractEntity> implements ICrud<T, Long> 
         Root<T> root = query.from(type);
         query.select(root).where(builder.like(builder.upper(root.get(attribute.getValue())), "%" + queryString.toUpperCase() + "%"));
         return em.createQuery(query).getResultList();
-    }
-    
-    @Override
-	public int count () {
-		assert em != null;
-    	CriteriaBuilder builder = em.getCriteriaBuilder();
-        CriteriaQuery<Long> cq = builder.createQuery(Long.class);
-        cq.select(builder.count(cq.from(type)));
-        return em.createQuery(cq).getSingleResult().intValue();
     }
 }
