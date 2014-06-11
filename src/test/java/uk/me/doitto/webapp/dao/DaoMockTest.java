@@ -364,6 +364,7 @@ public class DaoMockTest extends EasyMockSupport {
 
 	@Ignore
 	@Test
+	@SuppressWarnings("unchecked")
 	public final void testBefore () {
 		expect(em.getCriteriaBuilder()).andReturn(cb);
 		expect(cb.createQuery(SimpleEntity.class)).andReturn(cq);
