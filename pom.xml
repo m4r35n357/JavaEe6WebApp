@@ -188,7 +188,7 @@
 		
 		<!-- Generate JPA 2 metamodel -->
     <profile>
-        <id>jpa-canonical-gen</id>
+        <id>metamodelgen</id>
         <build>
             <plugins>
                 <plugin>
