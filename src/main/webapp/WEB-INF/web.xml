@@ -46,44 +46,6 @@
         <url-pattern>/resources/*</url-pattern>
     </servlet-mapping>
     
-	<servlet>
-		<display-name>DWR Servlet</display-name>
-		<servlet-name>dwr-invoker</servlet-name>
-		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
-		<init-param>
-			<param-name>activeReverseAjaxEnabled</param-name>
-			<param-value>true</param-value>
-		</init-param>
-		<init-param>
-			<param-name>maxWaitAfterWrite</param-name>
-			<param-value>1000</param-value>
-		</init-param>
-		<init-param>
-			<param-name>crossDomainSessionSecurity</param-name>
-			<param-value>false</param-value>
-		</init-param> 
-		<init-param>
-			<param-name>accessLogLevel</param-name>
-			<param-value>CALL</param-value>
-		</init-param>
-		<init-param>
-			<param-name>jsonpEnabled</param-name>
-			<param-value>false</param-value>
-		</init-param>
-        <init-param>
-            <param-name>allowScriptTagRemoting</param-name>
-            <param-value>true</param-value>
-        </init-param>
-   		<init-param>
-			<param-name>debug</param-name>
-			<param-value>true</param-value>
-		</init-param>
-  	</servlet>	
-	<servlet-mapping>
-	  <servlet-name>dwr-invoker</servlet-name>
-	  <url-pattern>/dwr/*</url-pattern>
-	</servlet-mapping>
-	
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>

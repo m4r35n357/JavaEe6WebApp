@@ -124,13 +124,6 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>org.directwebremoting</groupId>
-			<artifactId>dwr</artifactId>
-			<version>3.0.RC2</version>
-			<scope>compile</scope>
-		</dependency>
-		
-		<dependency>
 			<groupId>org.glassfish.main.extras</groupId>
 			<artifactId>glassfish-embedded-all</artifactId>
 			<version>${glassfishVersion}</version>
