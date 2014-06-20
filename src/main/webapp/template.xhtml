@@ -34,17 +34,10 @@
         <h:outputStylesheet library="css" name="ics.css" />
         <!--<h:outputStylesheet library="css/blueprint" name="print.css" />-->
         
-       <script src='/jee6webapp/dwr/engine.js'></script>
-       <script src='/jee6webapp/dwr/util.js'></script>
-       <script src='/jee6webapp/dwr/interface/Clock.js'></script>
-<!--        <h:outputScript library="js" name="clockdwr.js" /> -->
-        
         <title>Facelets Template</title>
     </h:head>
 
     <h:body>
-<!-- 	<h:body onload="dwr.engine.setActiveReverseAjax(true);"> -->
-		
         <f:loadBundle basename="uk.me.doitto.webapp.entity.General" var="msg" />
         
         <h:messages styleClass="errorMessage" globalOnly="true" showDetail="true" tooltip="true" />
@@ -74,16 +67,9 @@
                                 <li><h:commandLink action="#{trackController.jsfList}" value="Tracks" /></li>
                             </ul>
                             <ul class="menu">
-                               <li><h:outputLink value="/jee6webapp/dwr">DWR Test</h:outputLink></li>
-                               <li><h:outputLink value="/jee6webapp/dwr/engine.js">DWR Engine</h:outputLink></li>
-                               <li><h:outputLink value="/jee6webapp/dwr/util.js">DWR Utils</h:outputLink></li>
-                               <li><h:outputLink value="/jee6webapp/resources/application.wadl">WADL</h:outputLink></li>
-                            </ul>
-                            <ul class="menu">
                                 <li><h:outputLink value="http://nas:81/JavaEe6WebApp">Maven Site</h:outputLink></li>
                                 <li><h:outputLink value="http://sumo:8080/jenkins">Jenkins</h:outputLink></li>
                                 <li><h:outputLink value="http://sumo:8080/nexus">Nexus</h:outputLink></li>
-                                <li><h:outputLink value="http://sumo:8080/dwr">DWR Demos</h:outputLink></li>
                             </ul>
                         </h:form>
                     </ui:insert>
@@ -98,18 +84,6 @@
 			<ui:insert name="footer">
 				<h:outputText value="#{templateController.world}" />
 			</ui:insert>
-<!-- 			<div id="demoDiv"> -->
-<!-- 				<input type="button" value="Start / Stop" onclick="Clock.toggle();" /> -->
-<!-- 				Server status: <span id="pollStatus"></span> -->
-<!-- 				<div id="error"></div> -->
-<!-- 				<p></p> -->
-<!-- 				<h2 id="clockDisplay"></h2> -->
-<!-- 			</div> -->
-<!-- 			<div> -->
-<!-- 				<h3>Filtering</h3> -->
-<!-- 				<input type="button" value="Enable Updates" onclick="enableUpdates(true);" /> -->
-<!-- 				<input type="button" value="Disable Updates" onclick="enableUpdates(false);" /> -->
-<!-- 			</div> -->
 		</div>
 
 
